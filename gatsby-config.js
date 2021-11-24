@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Rebillia`,
+    description: `Rebillia is the leading subscription platform on the ecommerce giant, BigCommerce. We specialize in recurring billing, customizable subscription plans, and payment flexibility. `,
+    author: `Jamal Fox`,
+    siteUrl: `https://rebillia.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
