@@ -1,6 +1,39 @@
 .index_hero {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
-  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.index_hero .index_hero_left,
+.index_hero .index_hero_right {
+  height: 100%;
+  width: 50%;
+  background-color: #071B36;
+}
+
+.index_hero .index_hero_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.index_hero .index_hero_left h1 {
+  color: #fff;
+  width: 75%;
+  font-size: 48px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
 /*# sourceMappingURL=IndexHero.css.map */

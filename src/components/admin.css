@@ -1,0 +1,12 @@
+
+
+.button-purple_pos {
+    height: 50px;
+    padding: 0 1.5em;
+    border-radius: 12px;
+    background-color: #C04CFD;
+    border: none;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 2px 2px 20px #C04CFD;
+  }
