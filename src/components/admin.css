@@ -1,12 +1,12 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 .button-purple_pos {
-    height: 50px;
-    padding: 0 1.5em;
-    border-radius: 12px;
-    background-color: #C04CFD;
-    border: none;
-    color: #fff;
-    font-family: 'Open Sans', sans-serif;
-    box-shadow: 2px 2px 20px #C04CFD;
-  }
+  height: 50px;
+  padding: 0 1.5em;
+  border-radius: 12px;
+  background-color: #c04cfd;
+  border: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 2px 2px 20px #c04cfd;
+}

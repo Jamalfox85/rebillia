@@ -1,25 +1,98 @@
 .index_hero {
-    height: 90vh;
-    width: 100vw;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  .index_hero_left,
+  .index_hero_right {
+    height: 100%;
+    width: 50%;
+    background-color: #071b36;
+  }
+  .index_hero_left {
     display: flex;
-    .index_hero_left,
-    .index_hero_right {
-        height: 100%;
-        width: 50%;
-        background-color: #071B36;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    h1 {
+      color: #fff;
+      width: 75%;
+      font-size: 48px;
+      font-family: "Open Sans", sans-serif;
+      text-align: center;
+      font-weight: 800;
     }
-    .index_hero_left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;;
-        align-items: center;
-        h1 {
-            color: #fff;
-            width: 75%;
-            font-size: 48px;
-            font-family: 'Open Sans', sans-serif;
-            text-align: center;
-        }
-        
+    .particle-sphere {
+      height: 200px;
+      width: 200px;
+      position: relative;
+      background-color: red;
+      overflow: hidden;
+      .particles {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        z-index: -2;
+      }
     }
+  }
+  .index_hero_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .card {
+      height: 300px;
+      width: 450px;
+      border-radius: 12px;
+      background: inherit;
+      position: relative;
+      padding: 2em;
+      display: flex;
+      align-items: center;
+      transform: rotate(10deg);
+      color: white;
+      .card-logo {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        font-size: 2em;
+      }
+      .card-number {
+        position: relative;
+        font-size: 1em;
+        letter-spacing: 6px;
+        top: 20px;
+      }
+      .card-expiration {
+        position: absolute;
+        bottom: 75px;
+        left: 50%;
+      }
+      .card-name {
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+        font-size: 1.25em;
+      }
+      .card-visa {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        font-size: 2em;
+      }
+    }
+    .card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: inset 0 0 2000px rgba(209, 250, 255, 0.5);
+      //   box-shadow: inset 0 0 2000px rgba(192, 76, 253, 0.5);
+      filter: blur(10px);
+      background: inherit;
+    }
+  }
 }

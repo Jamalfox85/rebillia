@@ -10,7 +10,7 @@
 .index_hero .index_hero_right {
   height: 100%;
   width: 50%;
-  background-color: #071B36;
+  background-color: #071b36;
 }
 
 .index_hero .index_hero_left {
@@ -27,13 +27,109 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .index_hero .index_hero_left h1 {
   color: #fff;
   width: 75%;
   font-size: 48px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
+  font-weight: 800;
+}
+
+.index_hero .index_hero_left .particle-sphere {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  background-color: red;
+  overflow: hidden;
+}
+
+.index_hero .index_hero_left .particle-sphere .particles {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  z-index: -2;
+}
+
+.index_hero .index_hero_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.index_hero .index_hero_right .card {
+  height: 300px;
+  width: 450px;
+  border-radius: 12px;
+  background: inherit;
+  position: relative;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  color: white;
+}
+
+.index_hero .index_hero_right .card .card-logo {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2em;
+}
+
+.index_hero .index_hero_right .card .card-number {
+  position: relative;
+  font-size: 1em;
+  letter-spacing: 6px;
+  top: 20px;
+}
+
+.index_hero .index_hero_right .card .card-expiration {
+  position: absolute;
+  bottom: 75px;
+  left: 50%;
+}
+
+.index_hero .index_hero_right .card .card-name {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  font-size: 1.25em;
+}
+
+.index_hero .index_hero_right .card .card-visa {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 2em;
+}
+
+.index_hero .index_hero_right .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: inset 0 0 2000px rgba(209, 250, 255, 0.5);
+          box-shadow: inset 0 0 2000px rgba(209, 250, 255, 0.5);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  background: inherit;
 }
 /*# sourceMappingURL=IndexHero.css.map */
