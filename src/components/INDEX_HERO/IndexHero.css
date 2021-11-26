@@ -43,15 +43,14 @@
   height: 200px;
   width: 200px;
   position: relative;
-  background-color: red;
+  background-color: blue;
   overflow: hidden;
 }
 
 .index_hero .index_hero_left .particle-sphere .particles {
   height: 100px;
   width: 100px;
-  position: relative;
-  z-index: -2;
+  z-index: 0;
 }
 
 .index_hero .index_hero_right {

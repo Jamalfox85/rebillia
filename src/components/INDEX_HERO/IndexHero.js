@@ -16,19 +16,20 @@ const index_hero = () => {
   return (
     <div className="index_hero">
       <div className="index_hero_left">
-        <h1>The subscription network that keeps you connected.</h1>
+        <h1>
+          The <span style={{ color: "#D1FAFF" }}>SUBSCRIPTION</span> network
+          that keeps you <span>CONNECTED</span>.
+        </h1>
         <div className="particle-sphere">
-          <Particles
+          {/* <Particles
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
             className="particles"
-            width="500px"
-            height="500px"
             options={{
               background: {
                 color: {
-                  value: "#0d47a1",
+                  value: "transparent",
                 },
               },
               fpsLimit: 60,
@@ -99,10 +100,14 @@ const index_hero = () => {
                   random: true,
                   value: 5,
                 },
+                image: {
+                  width: 100,
+                  height: 100,
+                },
               },
               detectRetina: true,
             }}
-          />
+          /> */}
         </div>
         <button className="button-purple_pos">Contact</button>
       </div>
