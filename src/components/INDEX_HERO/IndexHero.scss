@@ -2,11 +2,14 @@
   height: 90vh;
   width: 100vw;
   display: flex;
+  position: relative;
+  background-color: #071b36;
+
   .index_hero_left,
   .index_hero_right {
     height: 100%;
     width: 50%;
-    background-color: #071b36;
+    position: relative;
   }
   .index_hero_left {
     display: flex;
@@ -21,18 +24,16 @@
       font-family: "Open Sans", sans-serif;
       text-align: center;
       font-weight: 800;
-    }
-    .particle-sphere {
-      height: 200px;
-      width: 200px;
+      z-index: 3;
       position: relative;
-      background-color: blue;
-      overflow: hidden;
-      .particles {
-        height: 100px;
-        width: 100px;
-        z-index: 0;
-      }
+    }
+    .particles {
+      position: relative;
+      z-index: 1;
+    }
+    button {
+      position: relative;
+      z-index: 3;
     }
   }
   .index_hero_right {
@@ -40,17 +41,21 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 3;
     .card {
       height: 300px;
       width: 450px;
       border-radius: 12px;
+      // background: #D1FAFF;
       background: inherit;
+      // background: #d1faff23;
       position: relative;
       padding: 2em;
       display: flex;
       align-items: center;
       transform: rotate(10deg);
-      color: white;
+      // color: #071B36;
+      color: #d1faff;
       .card-logo {
         position: absolute;
         top: 30px;

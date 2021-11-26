@@ -4,13 +4,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  background-color: #071b36;
 }
 
 .index_hero .index_hero_left,
 .index_hero .index_hero_right {
   height: 100%;
   width: 50%;
-  background-color: #071b36;
+  position: relative;
 }
 
 .index_hero .index_hero_left {
@@ -37,20 +39,18 @@
   font-family: "Open Sans", sans-serif;
   text-align: center;
   font-weight: 800;
-}
-
-.index_hero .index_hero_left .particle-sphere {
-  height: 200px;
-  width: 200px;
+  z-index: 3;
   position: relative;
-  background-color: blue;
-  overflow: hidden;
 }
 
-.index_hero .index_hero_left .particle-sphere .particles {
-  height: 100px;
-  width: 100px;
-  z-index: 0;
+.index_hero .index_hero_left .particles {
+  position: relative;
+  z-index: 1;
+}
+
+.index_hero .index_hero_left button {
+  position: relative;
+  z-index: 3;
 }
 
 .index_hero .index_hero_right {
@@ -64,6 +64,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  z-index: 3;
 }
 
 .index_hero .index_hero_right .card {
@@ -81,7 +82,7 @@
           align-items: center;
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
-  color: white;
+  color: #d1faff;
 }
 
 .index_hero .index_hero_right .card .card-logo {

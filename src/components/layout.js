@@ -4,7 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./HEADER/header"
 import "./layout.css"
-import './admin.css'
+import "./admin.css"
+import Footer from "./FOOTER/Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,9 +23,9 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          margin: `0`,
+          maxWidth: "100vw",
+          padding: `0`,
         }}
       >
         <main>{children}</main>

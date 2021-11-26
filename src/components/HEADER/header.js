@@ -2,16 +2,18 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "./header.css"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => (
   <header className="header">
-    <h1>Rebillia</h1>
+    <Link to="/"><StaticImage src="../../Assets/logo-rebillia.png" alt="Rebillia Logo" /></Link>
     <div className="header-nav-links">
-      <Link to="/">Home</Link>
-      <Link to="/">About</Link>
-      <Link to="/">Solutions</Link>
+      <Link to="/product">Product</Link>
+      <Link to="/solutions">Solutions</Link>
+      <Link to="/pricing">Pricing</Link>
+      <Link to="/company">Company</Link>
     </div>
-    <button>Contact Us</button>
+    <button className="button-green_pos">Contact Us</button>
   </header>
 )
 

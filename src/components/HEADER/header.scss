@@ -1,11 +1,25 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  background-color: green;
-  padding: 1em;
+  width: 100%;
+  padding: 1em 5vw;
+  background-color: #071b36;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 0.8em;
   .header-nav-links {
     width: 50%;
     display: flex;
     justify-content: space-evenly;
+    margin-right: auto;
+    a,
+    a:visited {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+    a:hover,
+    a:visited:hover {
+      color: #d1faff;
+      transition: 0.3s ease-in-out;
+    }
   }
 }

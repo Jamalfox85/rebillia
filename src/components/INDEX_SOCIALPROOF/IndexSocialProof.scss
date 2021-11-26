@@ -1,0 +1,22 @@
+.socialproof_wrapper {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  .socialproof-bar {
+    height: 5px;
+    width: 45%;
+    background-color: #071b36;
+  }
+  .socialproof-carousel {
+    display: flex;
+    width: 75%;
+    overflow: hidden;
+    justify-content: center;
+    .carousel-logo {
+      margin: 0 3em;
+    }
+  }
+}

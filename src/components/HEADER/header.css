@@ -2,11 +2,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: green;
-  padding: 1em;
+  width: 100%;
+  padding: 1em 5vw;
+  background-color: #071b36;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 0.8em;
 }
 
 .header .header-nav-links {
@@ -17,5 +18,19 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-right: auto;
+}
+
+.header .header-nav-links a,
+.header .header-nav-links a:visited {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.header .header-nav-links a:hover,
+.header .header-nav-links a:visited:hover {
+  color: #d1faff;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 /*# sourceMappingURL=header.css.map */

@@ -18,10 +18,10 @@ const index_hero = () => {
       <div className="index_hero_left">
         <h1>
           The <span style={{ color: "#D1FAFF" }}>SUBSCRIPTION</span> network
-          that keeps you <span>CONNECTED</span>.
+          that keeps you <span style={{ color: "#D1FAFF" }}>CONNECTED</span>.
         </h1>
-        <div className="particle-sphere">
-          {/* <Particles
+        <div className="particles">
+          <Particles
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
@@ -36,11 +36,11 @@ const index_hero = () => {
               interactivity: {
                 events: {
                   onClick: {
-                    enable: true,
+                    enable: false,
                     mode: "push",
                   },
                   onHover: {
-                    enable: true,
+                    enable: false,
                     mode: "repulse",
                   },
                   resize: true,
@@ -50,13 +50,13 @@ const index_hero = () => {
                     distance: 400,
                     duration: 2,
                     opacity: 0.8,
-                    size: 40,
+                    size: 4,
                   },
                   push: {
                     quantity: 4,
                   },
                   repulse: {
-                    distance: 200,
+                    distance: 100,
                     duration: 0.4,
                   },
                 },
@@ -73,14 +73,14 @@ const index_hero = () => {
                   width: 1,
                 },
                 collisions: {
-                  enable: true,
+                  enable: false,
                 },
                 move: {
                   direction: "none",
                   enable: true,
-                  outMode: "bounce",
+                  outMode: "out",
                   random: false,
-                  speed: 6,
+                  speed: 1,
                   straight: false,
                 },
                 number: {
@@ -88,7 +88,7 @@ const index_hero = () => {
                     enable: true,
                     value_area: 800,
                   },
-                  value: 80,
+                  value: 40,
                 },
                 opacity: {
                   value: 0.5,
@@ -107,9 +107,9 @@ const index_hero = () => {
               },
               detectRetina: true,
             }}
-          /> */}
+          />
         </div>
-        <button className="button-purple_pos">Contact</button>
+        <button className="button-green_pos">Contact</button>
       </div>
       <div className="index_hero_right">
         <div className="card">
