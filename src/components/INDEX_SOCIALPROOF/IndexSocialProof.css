@@ -1,5 +1,5 @@
 .socialproof_wrapper {
-  height: 50vh;
+  height: 25vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,18 +22,62 @@
   background-color: #071b36;
 }
 
-.socialproof_wrapper .socialproof-carousel {
+.socialproof_wrapper .socialproof-carousel-wrapper {
+  height: 100%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 75%;
-  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
 }
 
-.socialproof_wrapper .socialproof-carousel .carousel-logo {
+.socialproof_wrapper .socialproof-carousel-wrapper .socialproof-carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.socialproof_wrapper .socialproof-carousel-wrapper .socialproof-carousel .carousel-logo {
   margin: 0 3em;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }
 /*# sourceMappingURL=IndexSocialProof.css.map */

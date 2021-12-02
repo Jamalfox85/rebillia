@@ -3,8 +3,6 @@ import "./IndexFeatures.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons"
-import {onlinepayments} from '../../Assets/onlinepayments.png'
-import {popularpurchases} from '../../Assets/popularpurchases.png'
 
 const IndexFeatures = () => {
   const featureTitles = [
@@ -14,10 +12,29 @@ const IndexFeatures = () => {
     "Detailed Reporting",
   ]
   const featureImages = [
-    onlinepayments,
-    popularpurchases,
-    "../../Assets/customerlifecycles.png",
-    "../../Assets/detailedreporting.png",
+    <StaticImage
+            alt="online payments"
+            src = '../../Assets/onlinepayments.png'
+          />,
+    <StaticImage
+            alt="popular purchases"
+            src = '../../Assets/popularpurchases.png'
+          />,
+    ,
+    <StaticImage
+            alt="online payments"
+            src = "../../Assets/customerlifecycles.png"
+          />,
+    <StaticImage
+            alt="online payments"
+            src = "../../Assets/detailedreporting.png"
+          />
+  ]
+  const featureCheckboxes = [
+    ["Safe and Secure", "PCI DSS Level 1", "Flexibile Payment Options", "Crypto"],
+    ["Detailed Analytics", "Popularity Reports", "Cost Margin Analysis Data", "All Time Performer Information"],
+    ["Cohort Tracking", "Full Subscriber Lifecycle Management", "Customer Accessible Data Panel", "Invoice Billing"],
+    ["Extensive Reporting", "Subscriber Tracking", "Cohort Analysis", "Helpful Tips"]
   ]
 
   const [featureTitleIndex, setFeatureTitleIndex] = useState(0)
@@ -39,28 +56,31 @@ const IndexFeatures = () => {
         <div className="index_features_left">
           <h5>Stay Connected To...</h5>
           <h1>{featureTitles[featureTitleIndex]}</h1>
-          <StaticImage
-            alt="online payments"
-            src={featureImages[featureTitleIndex]}
-          />
+          {featureImages[featureTitleIndex]}
         </div>
         <div className="index_features_right">
           <ul>
+            {/* {featureCheckboxes.map((item, index)=> {
+              <li>
+                <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
+                {featureCheckboxes[0][0]}
+              </li>
+            })} */}
             <li>
               <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
-              Detailed Billing
+              {featureCheckboxes[featureTitleIndex][0]}
             </li>
             <li>
               <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
-              Powerful Analytics
+              {featureCheckboxes[featureTitleIndex][1]}
             </li>
             <li>
               <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
-              Cohort Grouping
+              {featureCheckboxes[featureTitleIndex][2]}
             </li>
             <li>
               <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
-              Revenue Recovery
+              {featureCheckboxes[featureTitleIndex][3]}
             </li>
           </ul>
           <button className="button-blue_pos">Learn More</button>
