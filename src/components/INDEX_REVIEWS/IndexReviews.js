@@ -34,6 +34,9 @@ const IndexReviews = () => {
         "Free Trial subscription model. After a 2 week trial the customer is upgraded to a full month-to-month subscription",
     },
   ]
+  const slideCircles = reviewData.map((item, index) => {
+    item = false
+  })
 
   const [reviewIndex, setReviewIndex] = useState(0)
   const changeReviewIndex = () => {
@@ -61,11 +64,13 @@ const IndexReviews = () => {
         </div>
       </div>
       <div className="indexreviews_progress">
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
+        {slideCircles.map((item, index) => {
+          if (index == reviewIndex) {
+            return <div className="progress_circle active"></div>
+          } else {
+            return <div className="progress_circle"></div>
+          }
+        })}
       </div>
     </div>
   )

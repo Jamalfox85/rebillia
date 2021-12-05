@@ -104,7 +104,11 @@
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #999;
   margin: 0 1em;
+}
+
+.index_features_wrapper .index_features_progress .active {
+  background-color: #1452a3;
 }
 /*# sourceMappingURL=IndexFeatures.css.map */

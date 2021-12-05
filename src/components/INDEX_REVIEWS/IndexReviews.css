@@ -113,7 +113,11 @@
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #999;
   margin: 0 1em;
+}
+
+.indexreviews_wrapper .indexreviews_progress .active {
+  background-color: #1452a3;
 }
 /*# sourceMappingURL=IndexReviews.css.map */

@@ -12,30 +12,50 @@ const IndexFeatures = () => {
     "Detailed Reporting",
   ]
   const featureImages = [
+    <StaticImage alt="online payments" src="../../Assets/onlinepayments.png" />,
     <StaticImage
-            alt="online payments"
-            src = '../../Assets/onlinepayments.png'
-          />,
-    <StaticImage
-            alt="popular purchases"
-            src = '../../Assets/popularpurchases.png'
-          />,
+      alt="popular purchases"
+      src="../../Assets/popularpurchases.png"
+    />,
     ,
     <StaticImage
-            alt="online payments"
-            src = "../../Assets/customerlifecycles.png"
-          />,
+      alt="online payments"
+      src="../../Assets/customerlifecycles.png"
+    />,
     <StaticImage
-            alt="online payments"
-            src = "../../Assets/detailedreporting.png"
-          />
+      alt="online payments"
+      src="../../Assets/detailedreporting.png"
+    />,
   ]
   const featureCheckboxes = [
-    ["Safe and Secure", "PCI DSS Level 1", "Flexibile Payment Options", "Crypto"],
-    ["Detailed Analytics", "Popularity Reports", "Cost Margin Analysis Data", "All Time Performer Information"],
-    ["Cohort Tracking", "Full Subscriber Lifecycle Management", "Customer Accessible Data Panel", "Invoice Billing"],
-    ["Extensive Reporting", "Subscriber Tracking", "Cohort Analysis", "Helpful Tips"]
+    [
+      "Safe and Secure",
+      "PCI DSS Level 1",
+      "Flexibile Payment Options",
+      "Crypto",
+    ],
+    [
+      "Detailed Analytics",
+      "Popularity Reports",
+      "Cost Margin Analysis Data",
+      "All Time Performer Information",
+    ],
+    [
+      "Cohort Tracking",
+      "Full Subscriber Lifecycle Management",
+      "Customer Accessible Data Panel",
+      "Invoice Billing",
+    ],
+    [
+      "Extensive Reporting",
+      "Subscriber Tracking",
+      "Cohort Analysis",
+      "Helpful Tips",
+    ],
   ]
+  const slideCircles = featureCheckboxes.map((item, index) => {
+    item = false
+  })
 
   const [featureTitleIndex, setFeatureTitleIndex] = useState(0)
 
@@ -87,11 +107,13 @@ const IndexFeatures = () => {
         </div>
       </div>
       <div className="index_features_progress">
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
+        {slideCircles.map((item, index) => {
+          if (index == featureTitleIndex) {
+            return <div className="progress_circle active"></div>
+          } else {
+            return <div className="progress_circle"></div>
+          }
+        })}
       </div>
     </div>
   )
