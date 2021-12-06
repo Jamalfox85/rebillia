@@ -6,16 +6,20 @@
   display: flex;
   position: relative;
   background-color: #071b36;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .index_hero .index_hero_left,
 .index_hero .index_hero_right {
-  height: 100%;
   width: 50%;
   position: relative;
 }
 
 .index_hero .index_hero_left {
+  height: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

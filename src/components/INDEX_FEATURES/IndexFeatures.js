@@ -3,8 +3,37 @@ import "./IndexFeatures.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react"
 
 const IndexFeatures = () => {
+  const slideData = [
+    {
+      feature: "Finances",
+      imagesrc: "../../Assets/onlinepayments.png",
+      checkboxes: [
+        "Detailed Billing",
+        "Powerful Analytics",
+        "Cohort Grouping",
+        "Revenue Recovery",
+      ],
+      buttonlink: "/product",
+    },
+    {
+      feature: "Billing",
+      imagesrc: "../../Assets/onlinepayments.png",
+      checkboxes: ["Billing 1", "Billing 2", "Billing 3", "Billing 4"],
+      buttonlink: "/product",
+    },
+  ]
+
+  const [currentSlide, setCurrentSlide] = useState(slideData[0])
+  const changeSlide = () => {
+    setTimeout(
+      setCurrentSlide(prevCurrentSlide => prevCurrentSlide + 1),
+      500
+    )
+  }
+
   return (
     <div className="index_features_wrapper">
       <div className="index_features_content">
