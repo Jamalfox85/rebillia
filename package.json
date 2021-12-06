@@ -11,6 +11,7 @@
     "@splidejs/react-splide": "^0.6.17",
     "@splidejs/splide-extension-auto-scroll": "^0.3.3",
     "chart.js": "^3.6.1",
+    "chartjs": "^0.3.24",
     "gatsby": "^4.2.0",
     "gatsby-cli": "^4.2.0",
     "gatsby-plugin-fontawesome-css": "^1.2.0",

@@ -3,7 +3,6 @@ import "./IndexFeatures.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons"
-import { useState } from "react"
 
 const IndexFeatures = () => {
   const featureTitles = [
