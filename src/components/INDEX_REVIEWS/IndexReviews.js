@@ -46,7 +46,7 @@ const IndexReviews = () => {
       } else {
         setReviewIndex(0)
       }
-    }, 2000)
+    }, 5000)
   }
   changeReviewIndex()
 
@@ -55,7 +55,7 @@ const IndexReviews = () => {
       <div className="indexreviews_content">
         <div className="indexreviews_left">
           <FontAwesomeIcon icon={faQuoteLeft} className="quote-left" />
-          <h5>{reviewData[reviewIndex].review}</h5>
+          <p>{reviewData[reviewIndex].review}</p>
           <FontAwesomeIcon icon={faQuoteRight} className="quote-right" />
         </div>
         <div className="indexreviews_right">
