@@ -9,12 +9,16 @@ import IndexFeatures from "../components/INDEX_FEATURES/IndexFeatures"
 import IndexSocialProof from "../components/INDEX_SOCIALPROOF/IndexSocialProof"
 import IndexReviews from "../components/INDEX_REVIEWS/IndexReviews"
 import IndexCTABanner from "../components/INDEX_CTABANNER/IndexCTABanner"
+import Index_mainfunctions from "../components/INDEX_MAINFUNCTIONS/Index_mainfunctions"
+import IndexStatistics from "../components/INDEX_STATISTICS/IndexStatistics"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <IndexHero />
+    <Index_mainfunctions />
     <IndexFeatures />
+    <IndexStatistics />
     <IndexSocialProof />
     <IndexReviews />
     <IndexCTABanner />

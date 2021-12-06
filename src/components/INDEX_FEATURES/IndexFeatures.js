@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import "./IndexFeatures.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -6,70 +6,115 @@ import { faCheckSquare } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
 
 const IndexFeatures = () => {
-  const slideData = [
-    {
-      feature: "Finances",
-      imagesrc: "../../Assets/onlinepayments.png",
-      checkboxes: [
-        "Detailed Billing",
-        "Powerful Analytics",
-        "Cohort Grouping",
-        "Revenue Recovery",
-      ],
-      buttonlink: "/product",
-    },
-    {
-      feature: "Billing",
-      imagesrc: "../../Assets/onlinepayments.png",
-      checkboxes: ["Billing 1", "Billing 2", "Billing 3", "Billing 4"],
-      buttonlink: "/product",
-    },
+  const featureTitles = [
+    "Recurring Offerings",
+    "Popular Purchases",
+    "Customer Lifecycles",
+    "Detailed Reporting",
   ]
+  const featureImages = [
+    <StaticImage alt="online payments" src="../../Assets/onlinepayments.png" />,
+    <StaticImage
+      alt="popular purchases"
+      src="../../Assets/popularpurchases.png"
+    />,
+    ,
+    <StaticImage
+      alt="online payments"
+      src="../../Assets/customerlifecycles.png"
+    />,
+    <StaticImage
+      alt="online payments"
+      src="../../Assets/detailedreporting.png"
+    />,
+  ]
+  const featureCheckboxes = [
+    [
+      "Safe and Secure",
+      "PCI DSS Level 1",
+      "Flexibile Payment Options",
+      "Crypto",
+    ],
+    [
+      "Detailed Analytics",
+      "Popularity Reports",
+      "Cost Margin Analysis Data",
+      "All Time Performer Information",
+    ],
+    [
+      "Cohort Tracking",
+      "Full Subscriber Lifecycle Management",
+      "Customer Accessible Data Panel",
+      "Invoice Billing",
+    ],
+    [
+      "Extensive Reporting",
+      "Subscriber Tracking",
+      "Cohort Analysis",
+      "Helpful Tips",
+    ],
+  ]
+  const slideCircles = featureCheckboxes.map((item, index) => {
+    item = false
+  })
 
-  const [currentSlide, setCurrentSlide] = useState(slideData[0])
-  const changeSlide = () => {
-    setTimeout(
-      setCurrentSlide(prevCurrentSlide => prevCurrentSlide + 1),
-      500
-    )
+  const [featureTitleIndex, setFeatureTitleIndex] = useState(0)
+
+  const updateFeatureTitle = () => {
+    setTimeout(() => {
+      if (featureTitleIndex < featureTitles.length - 1) {
+        setFeatureTitleIndex(prevFeatureTitleIndex => prevFeatureTitleIndex + 1)
+      } else {
+        setFeatureTitleIndex(0)
+      }
+    }, 2500)
   }
+  updateFeatureTitle()
 
   return (
     <div className="index_features_wrapper">
       <div className="index_features_content">
         <div className="index_features_left">
           <h5>Stay Connected To...</h5>
-          <h1>Finances</h1>
-          <StaticImage src="../../Assets/onlinepayments.png" />
+          <h1>{featureTitles[featureTitleIndex]}</h1>
+          {featureImages[featureTitleIndex]}
         </div>
         <div className="index_features_right">
           <ul>
+            {/* {featureCheckboxes.map((item, index)=> {
+              <li>
+                <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
+                {featureCheckboxes[0][0]}
+              </li>
+            })} */}
             <li>
               <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
-              Detailed Billing
+              {featureCheckboxes[featureTitleIndex][0]}
             </li>
             <li>
               <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
-              Powerful Analytics
+              {featureCheckboxes[featureTitleIndex][1]}
             </li>
             <li>
               <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
-              Cohort Grouping
+              {featureCheckboxes[featureTitleIndex][2]}
             </li>
             <li>
               <FontAwesomeIcon icon={faCheckSquare} className="checkbox-icon" />
-              Revenue Recovery
+              {featureCheckboxes[featureTitleIndex][3]}
             </li>
           </ul>
           <button className="button-blue_pos">Learn More</button>
         </div>
       </div>
       <div className="index_features_progress">
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
-        <div className="progress_circle"></div>
+        {slideCircles.map((item, index) => {
+          if (index == featureTitleIndex) {
+            return <div className="progress_circle active"></div>
+          } else {
+            return <div className="progress_circle"></div>
+          }
+        })}
       </div>
     </div>
   )

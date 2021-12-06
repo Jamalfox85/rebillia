@@ -1,22 +1,44 @@
 .socialproof_wrapper {
-  height: 50vh;
+  height: 25vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin: 2em 0;
   .socialproof-bar {
-    height: 5px;
+    height: 2px;
     width: 45%;
+    border-radius: 8px;
     background-color: #071b36;
   }
-  .socialproof-carousel {
+  .socialproof-carousel-wrapper {
+    height: 100%;
+    width: 60%;
     display: flex;
-    width: 75%;
-    overflow: hidden;
     justify-content: center;
-    .carousel-logo {
-      margin: 0 3em;
+    align-items: center;
+
+    .socialproof-carousel {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      animation-name: rotate;
+      animation-duration: 7s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      .carousel-logo {
+        margin: 0 3em;
+      }
     }
   }
 }
+
+// @keyframes rotate {
+//   0% {
+//     transform: translateX(0)
+//   }
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
