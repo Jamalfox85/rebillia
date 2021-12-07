@@ -8,7 +8,6 @@ import {
   faShippingFast,
   faUsers,
   faChartBar,
-  faPayPal,
   faMoneyCheckAlt,
 } from "@fortawesome/free-solid-svg-icons"
 

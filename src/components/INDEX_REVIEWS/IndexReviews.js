@@ -3,7 +3,6 @@ import "./IndexReviews.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons"
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons"
-import { StaticImage } from "gatsby-plugin-image"
 
 const IndexReviews = () => {
   const reviewData = [
@@ -36,6 +35,7 @@ const IndexReviews = () => {
   ]
   const slideCircles = reviewData.map((item, index) => {
     item = false
+    return <></>
   })
 
   const [reviewIndex, setReviewIndex] = useState(0)
@@ -65,7 +65,7 @@ const IndexReviews = () => {
       </div>
       <div className="indexreviews_progress">
         {slideCircles.map((item, index) => {
-          if (index == reviewIndex) {
+          if (index === reviewIndex) {
             return <div className="progress_circle active"></div>
           } else {
             return <div className="progress_circle"></div>

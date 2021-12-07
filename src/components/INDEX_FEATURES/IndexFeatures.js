@@ -17,7 +17,7 @@ const IndexFeatures = () => {
       alt="popular purchases"
       src="../../Assets/popularpurchases.png"
     />,
-    ,
+
     <StaticImage
       alt="online payments"
       src="../../Assets/customerlifecycles.png"
@@ -55,6 +55,7 @@ const IndexFeatures = () => {
   ]
   const slideCircles = featureCheckboxes.map((item, index) => {
     item = false
+    return <></>
   })
 
   const [featureTitleIndex, setFeatureTitleIndex] = useState(0)
@@ -108,7 +109,7 @@ const IndexFeatures = () => {
       </div>
       <div className="index_features_progress">
         {slideCircles.map((item, index) => {
-          if (index == featureTitleIndex) {
+          if (index === featureTitleIndex) {
             return <div className="progress_circle active"></div>
           } else {
             return <div className="progress_circle"></div>

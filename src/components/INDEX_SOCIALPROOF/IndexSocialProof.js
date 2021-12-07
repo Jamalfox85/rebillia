@@ -3,7 +3,6 @@ import "./IndexSocialProof.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/themes/splide-default.min.css"
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll"
 
 const socialproof = () => {
   const companyLogos = [
