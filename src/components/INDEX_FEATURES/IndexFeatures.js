@@ -9,7 +9,7 @@ const IndexFeatures = () => {
     "Recurring Offerings",
     "Popular Purchases",
     "Customer Lifecycles",
-    "Detailed Reporting",
+    "Detailed Reporting", 
   ]
   const featureImages = [
     <StaticImage alt="online payments" src="../../Assets/onlinepayments.png" />,
