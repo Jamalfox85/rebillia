@@ -36,6 +36,7 @@
     "sass": "^1.43.4"
   },
   "devDependencies": {
+    "electron-rebuild": "^3.2.5",
     "prettier": "^2.4.1"
   },
   "keywords": [
