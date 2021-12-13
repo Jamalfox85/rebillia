@@ -29,13 +29,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          
-          <Footer/>
+        <footer>
+          <Footer />
         </footer>
       </div>
     </>

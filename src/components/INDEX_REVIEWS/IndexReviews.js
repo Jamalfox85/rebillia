@@ -1,10 +1,14 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./IndexReviews.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons"
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons"
+import { useAnimation, motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 const IndexReviews = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
   const reviewData = [
     {
       company: "Company 1",
@@ -50,12 +54,29 @@ const IndexReviews = () => {
   }
   changeReviewIndex()
 
+  const reviewVariants = {
+    visible: { opacity: 1, scale: 1.05, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 0 },
+  }
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
+    }
+  }, [controls, inView])
+
   return (
     <div className="indexreviews_wrapper">
       <div className="indexreviews_content">
         <div className="indexreviews_left">
           <FontAwesomeIcon icon={faQuoteLeft} className="quote-left" />
-          <p>{reviewData[reviewIndex].review}</p>
+          <motion.p
+            variants={reviewVariants}
+            initial="hidden"
+            animate={controls}
+            ref={ref}
+          >
+            {reviewData[reviewIndex].review}
+          </motion.p>
           <FontAwesomeIcon icon={faQuoteRight} className="quote-right" />
         </div>
         <div className="indexreviews_right">

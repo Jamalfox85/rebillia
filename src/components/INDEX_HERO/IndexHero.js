@@ -1,6 +1,7 @@
 import React from "react"
 import "./IndexHero.css"
 import Particles from "react-tsparticles"
+import Hover from "react-3d-hover"
 
 const index_hero = () => {
   const particlesInit = main => {
@@ -112,13 +113,15 @@ const index_hero = () => {
         <button className="button-green_pos">Contact</button>
       </div>
       <div className="index_hero_right">
-        <div className="card">
-          <h2 className="card-logo">Rebillia</h2>
-          <h2 className="card-number">4242 4242 4242 4242</h2>
-          <h2 className="card-expiration">12/25</h2>
-          <h2 className="card-name">Rebillia Platform</h2>
-          <h2 className="card-visa">VISA</h2>
-        </div>
+        <Hover scale={1.03} perspective={450} speed={750}>
+          <div className="card">
+            <h2 className="card-logo">Rebillia</h2>
+            <h2 className="card-number">4242 4242 4242 4242</h2>
+            <h2 className="card-expiration">12/25</h2>
+            <h2 className="card-name">Rebillia Platform</h2>
+            <h2 className="card-visa">VISA</h2>
+          </div>
+        </Hover>
       </div>
     </div>
   )

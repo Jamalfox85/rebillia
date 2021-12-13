@@ -8,6 +8,7 @@ import IndexSocialProof from "../components/INDEX_SOCIALPROOF/IndexSocialProof"
 import IndexReviews from "../components/INDEX_REVIEWS/IndexReviews"
 import IndexCTABanner from "../components/INDEX_CTABANNER/IndexCTABanner"
 import IndexMainFunctions from "../components/INDEX_MAINFUNCTIONS/IndexMainFunctions"
+import IndexStatistics from "../components/INDEX_STATISTICS/IndexStatistics"
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +16,7 @@ const IndexPage = () => (
     <IndexHero />
     <IndexMainFunctions />
     <IndexFeatures />
-    {/* <IndexStatistics /> */}
+    <IndexStatistics />
     <IndexSocialProof />
     <IndexReviews />
     <IndexCTABanner />

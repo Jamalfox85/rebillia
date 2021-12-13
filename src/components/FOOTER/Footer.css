@@ -10,10 +10,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #071b36;
+  padding: 4em 0 2em 0;
+  color: #fff;
 }
 
 .footer-wrapper .footer-main {
-  width: 75%;
+  width: 90%;
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,7 +30,20 @@
   margin-bottom: 2em;
 }
 
-.footer-wrapper .footer-main .footer-main-links {
+.footer-wrapper .footer-main .footer-main-links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-wrapper .footer-main .footer-main-links-wrapper .footer-main-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,24 +56,45 @@
           align-items: center;
 }
 
-.footer-wrapper .footer-main .footer-main-links a,
-.footer-wrapper .footer-main .footer-main-links a:visited {
+.footer-wrapper .footer-main .footer-main-links-wrapper .footer-main-links a,
+.footer-wrapper .footer-main .footer-main-links-wrapper .footer-main-links a:visited {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
-.footer-wrapper .footer-main .footer-main-links a:hover,
-.footer-wrapper .footer-main .footer-main-links a:hover:visited {
-  color: #1452a3;
+.footer-wrapper .footer-main .footer-main-links-wrapper .footer-main-links a:hover,
+.footer-wrapper .footer-main .footer-main-links-wrapper .footer-main-links a:hover:visited {
+  color: #06ba63;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
 }
 
-.footer-wrapper .footer-main .email-input {
+.footer-wrapper .footer-main .email-list .email-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.footer-wrapper .footer-main .email-input input {
-  border-radius: 12px 0 0 12px;
+.footer-wrapper .footer-main .email-list .email-input input {
+  border-radius: 12px;
+  outline: none;
+  padding-left: 5%;
+  height: 2em;
+  background-color: #fff;
+  border: none;
+}
+
+.footer-wrapper .footer-main .email-list .email-input .email-input-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.25em;
+  margin-left: 2em;
 }
 /*# sourceMappingURL=Footer.css.map */

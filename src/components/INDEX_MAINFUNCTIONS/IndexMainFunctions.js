@@ -92,17 +92,18 @@ const Index_mainfunctions = () => {
             <Link to="/features">Learn more</Link>
           </div>
         </Hover>
-        <div className="mf mf-6">
-          <h6>Powerful Analytics</h6>
-          <FontAwesomeIcon icon={faChartBar} className="mf-image" />
-
-          <p>
-            Track all the data surrounding your subscriptions. Monitor cohorts,
-            identify your highest performing subscriptions, and download
-            detailed subscriber reports.
-          </p>
-          <Link to="/features">Learn more</Link>
-        </div>
+        <Hover scale={1.05} perspective={450} speed={750}>
+          <div className="mf mf-6">
+            <h6>Powerful Analytics</h6>
+            <FontAwesomeIcon icon={faChartBar} className="mf-image" />
+            <p>
+              Track all the data surrounding your subscriptions. Monitor
+              cohorts, identify your highest performing subscriptions, and
+              download detailed subscriber reports.
+            </p>
+            <Link to="/features">Learn more</Link>
+          </div>
+        </Hover>
       </div>
     </div>
   )

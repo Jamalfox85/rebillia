@@ -4,31 +4,49 @@
   height: 50px;
   padding: 0 1.5em;
   border-radius: 12px;
-  background-color: #1452a3;
+  background-color: rgba(20, 82, 163, 0.85);
   border: none;
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  box-shadow: 2px 2px 20px #1452a3;
+  box-shadow: 2px 2px 8px rgba(20, 82, 163, 0.75);
+}
+.button-blue_pos:hover {
+  background-color: rgba(20, 82, 163, 1);
+  box-shadow: 2px 2px 15px rgba(20, 82, 163, 1);
+  transition: 0.1s ease-in;
+  cursor: pointer;
 }
 
 .button-purple_pos {
   height: 50px;
   padding: 0 1.5em;
   border-radius: 12px;
-  background-color: #c04cfd;
+  background-color: rgba(192, 76, 253, 0.85);
   border: none;
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  box-shadow: 2px 2px 20px #c04cfd;
+  box-shadow: 2px 2px 8px rgba(192, 76, 253, 0.75);
+}
+.button-purple_pos:hover {
+  background-color: rgba(192, 76, 253, 1);
+  box-shadow: 2px 2px 15px rgba(192, 76, 253, 1);
+  transition: 0.1s ease-in;
+  cursor: pointer;
 }
 
 .button-green_pos {
   height: 50px;
   padding: 0 1.5em;
   border-radius: 12px;
-  background-color: #06ba63;
+  background-color: rgba(6, 186, 99, 0.85);
   border: none;
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  box-shadow: 2px 2px 20px #06ba63;
+  box-shadow: 2px 2px 8px rgba(6, 186, 99, 0.75);
+}
+.button-green_pos:hover {
+  background-color: rgba(6, 186, 99, 1);
+  box-shadow: 2px 2px 15px rgba(6, 186, 99, 1);
+  transition: 0.1s ease-in;
+  cursor: pointer;
 }

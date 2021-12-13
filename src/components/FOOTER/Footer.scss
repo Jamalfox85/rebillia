@@ -3,33 +3,56 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #071b36;
+  padding: 4em 0 2em 0;
+  color: #fff;
   .footer-main {
-    width: 75%;
+    width: 90%;
     height: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 2em;
-    .footer-main-links {
+    .footer-main-links-wrapper {
       display: flex;
-      flex-direction: column;
+      width: 50vw;
+      justify-content: space-evenly;
       align-items: center;
-      a,
-      a:visited {
-        text-decoration: none;
-        color: #000;
-      }
-      a:hover,
-      a:hover:visited {
-        color: #1452a3;
+      .footer-main-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a,
+        a:visited {
+          text-decoration: none;
+          color: #fff;
+        }
+        a:hover,
+        a:hover:visited {
+          color: #06ba63;
+          transition: 0.1s ease-in;
+        }
       }
     }
-    .email-input {
-      display: flex;
-      input {
-        border-radius: 12px 0 0 12px;
+    .email-list {
+      .email-input {
+        display: flex;
+        input {
+          border-radius: 12px;
+          outline: none;
+          padding-left: 5%;
+          height: 2em;
+          background-color: #fff;
+          border: none;
+        }
+        .email-input-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 2.25em;
+          margin-left: 2em;
+        }
       }
-
     }
   }
 }
