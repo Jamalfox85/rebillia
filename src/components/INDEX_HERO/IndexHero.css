@@ -55,6 +55,15 @@
 .index_hero .index_hero_left button {
   position: relative;
   z-index: 3;
+  margin: 1em;
+  -webkit-transform: scale(4);
+          transform: scale(4);
+}
+
+.index_hero .index_hero_left .hero-bttn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .index_hero .index_hero_right {

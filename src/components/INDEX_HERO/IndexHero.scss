@@ -36,6 +36,11 @@
     button {
       position: relative;
       z-index: 3;
+      margin: 1em;
+      transform: scale(4);
+    }
+    .hero-bttn-group {
+      display: flex;
     }
   }
   .index_hero_right {
@@ -58,7 +63,7 @@
       transform: rotate(10deg);
       // color: #071B36;
       color: #d1faff;
-    
+
       .card-logo {
         position: absolute;
         top: 30px;

@@ -1,5 +1,5 @@
 .contact-page-wrapper {
-  height: 100vh;
+  height: auto;
   width: 100%;
   padding: 2em;
   margin: 10vh 0;
@@ -15,7 +15,7 @@
     justify-content: space-evenly;
   }
   .contact-form-wrapper {
-    width: 65%;
+    width: 80%;
     padding: 2em 0;
     background-color: #071b36;
     border: solid 2px black;
@@ -26,6 +26,7 @@
     align-items: center;
     justify-content: space-evenly;
     position: relative;
+    z-index: 2;
     .form-row {
       display: flex;
       .input-group {

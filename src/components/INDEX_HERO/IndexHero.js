@@ -139,15 +139,26 @@ const Index_hero = () => {
             }}
           />
         </div>
-        <motion.button
-          className="button-green_pos"
-          variants={heroButtonVariants}
-          initial="hidden"
-          animate={controls}
-          ref={ref}
-        >
-          Contact
-        </motion.button>
+        <div className="hero-bttn-group">
+          <motion.button
+            className="button-green_pos"
+            variants={heroButtonVariants}
+            initial="hidden"
+            animate={controls}
+            ref={ref}
+          >
+            Contact US
+          </motion.button>
+          <motion.button
+            className="button-green_neg"
+            variants={heroButtonVariants}
+            initial="hidden"
+            animate={controls}
+            ref={ref}
+          >
+            Schedule Demo
+          </motion.button>
+        </div>
       </div>
       <motion.div
         className="index_hero_right"

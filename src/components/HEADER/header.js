@@ -14,9 +14,10 @@ const Header = () => (
       <Link to="/solutions">Solutions</Link>
       <Link to="/pricing">Pricing</Link>
       <Link to="/company">Company</Link>
-      <Link to="/contact">Contact</Link>
     </div>
-    <button className="button-green_pos">Contact Us</button>
+    <Link to="/contact">
+      <button className="button-green_pos">Contact Us</button>
+    </Link>
   </header>
 )
 

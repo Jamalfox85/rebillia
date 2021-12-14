@@ -9,6 +9,18 @@ import { useInView } from "react-intersection-observer"
 const IndexReviews = () => {
   const controls = useAnimation()
   const [ref, inView] = useInView()
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
+    }
+  }, [controls, inView])
+
+  const reviewVariants = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+    hidden: { opacity: 0, y: 50 },
+  }
+
   const reviewData = [
     {
       company: "Company 1",
@@ -50,22 +62,18 @@ const IndexReviews = () => {
       } else {
         setReviewIndex(0)
       }
-    }, 5000)
+    }, 4500)
   }
   changeReviewIndex()
 
-  const reviewVariants = {
-    visible: { opacity: 1, scale: 1.05, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, scale: 0 },
-  }
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible")
-    }
-  }, [controls, inView])
-
   return (
-    <div className="indexreviews_wrapper">
+    <motion.div
+      className="indexreviews_wrapper"
+      // variants={reviewVariants}
+      // initial="hidden"
+      // animate={controls}
+      // ref={ref}
+    >
       <div className="indexreviews_content">
         <div className="indexreviews_left">
           <FontAwesomeIcon icon={faQuoteLeft} className="quote-left" />
@@ -86,7 +94,7 @@ const IndexReviews = () => {
           }
         })}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

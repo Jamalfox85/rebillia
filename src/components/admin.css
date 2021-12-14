@@ -50,3 +50,19 @@
   transition: 0.1s ease-in;
   cursor: pointer;
 }
+.button-green_neg {
+  height: 50px;
+  padding: 0 1.5em;
+  border-radius: 12px;
+  background-color: transparent;
+  border: solid 2px rgba(6, 186, 99, 0.85);
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 2px 2px 8px rgba(6, 186, 99, 0.75);
+}
+.button-green_neg:hover {
+  background-color: rgba(6, 186, 99, 1);
+  box-shadow: 2px 2px 15px rgba(6, 186, 99, 1);
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}

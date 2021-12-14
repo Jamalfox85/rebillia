@@ -8,17 +8,15 @@ import { useInView } from "react-intersection-observer"
 
 const IndexFeatures = () => {
   const controls = useAnimation()
-  const [ref, inView] = useInView()
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible")
-    }
-  }, [controls, inView])
+  // const [ref, inView] = useInView()
 
   const featuresLeftVariations = {
-    visible: { opacity: 1, x: -400, transition: { duration: 0.7 } },
-    hidden: { opacity: 0, x: 0 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
+    hidden: { opacity: 0, x: -200 },
+  }
+  const featuresRightVariations = {
+    visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
+    hidden: { opacity: 0, x: 200 },
   }
 
   const featureTitles = [
@@ -83,19 +81,31 @@ const IndexFeatures = () => {
       } else {
         setFeatureTitleIndex(0)
       }
-    }, 2500)
+      controls.start("visible")
+      console.log("ping")
+    }, 4000)
   }
   updateFeatureTitle()
 
   return (
     <div className="index_features_wrapper">
       <div className="index_features_content">
-        <div className="index_features_left">
+        <motion.div
+          className="index_features_left"
+          variants={featuresLeftVariations}
+          initial="hidden"
+          animate={controls}
+        >
           <h5>Stay Connected To...</h5>
           <h1>{featureTitles[featureTitleIndex]}</h1>
           {featureImages[featureTitleIndex]}
-        </div>
-        <div className="index_features_right">
+        </motion.div>
+        <motion.div
+          className="index_features_right"
+          variants={featuresRightVariations}
+          initial="hidden"
+          animate={controls}
+        >
           <ul>
             {/* {featureCheckboxes.map((item, index)=> {
               <li>
@@ -121,7 +131,7 @@ const IndexFeatures = () => {
             </li>
           </ul>
           <button className="button-blue_pos">Learn More</button>
-        </div>
+        </motion.div>
       </div>
       <div className="index_features_progress">
         {slideCircles.map((item, index) => {

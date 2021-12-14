@@ -1,10 +1,21 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import Particles from "react-tsparticles"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import "../components/Page_Styles/contact-page/contact-page.css"
+
+const particlesInit = main => {
+  console.log(main)
+
+  // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+}
+
+const particlesLoaded = container => {
+  console.log(container)
+}
 
 const ContactPage = () => (
   <Layout>
@@ -62,6 +73,95 @@ const ContactPage = () => (
           Submit
         </button>
       </form>
+      <div className="particles">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          className="particles"
+          options={{
+            background: {
+              color: {
+                value: "transparent",
+              },
+            },
+            fpsLimit: 60,
+            interactivity: {
+              events: {
+                onClick: {
+                  enable: false,
+                  mode: "push",
+                },
+                onHover: {
+                  enable: false,
+                  mode: "repulse",
+                },
+                resize: true,
+              },
+              modes: {
+                bubble: {
+                  distance: 400,
+                  duration: 2,
+                  opacity: 0.8,
+                  size: 4,
+                },
+                push: {
+                  quantity: 4,
+                },
+                repulse: {
+                  distance: 100,
+                  duration: 0.4,
+                },
+              },
+            },
+            particles: {
+              color: {
+                value: "#071b36",
+              },
+              links: {
+                color: "#071b36",
+                distance: 150,
+                enable: true,
+                opacity: 0.5,
+                width: 1,
+              },
+              collisions: {
+                enable: false,
+              },
+              move: {
+                direction: "none",
+                enable: true,
+                outMode: "out",
+                random: false,
+                speed: 1,
+                straight: false,
+              },
+              number: {
+                density: {
+                  enable: true,
+                  value_area: 800,
+                },
+                value: 40,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                random: true,
+                value: 5,
+              },
+              image: {
+                width: 100,
+                height: 100,
+              },
+            },
+            detectRetina: true,
+          }}
+        />
+      </div>
     </div>
   </Layout>
 )
