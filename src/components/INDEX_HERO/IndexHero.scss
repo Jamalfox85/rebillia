@@ -45,8 +45,8 @@
     position: relative;
     z-index: 3;
     .card {
-      height: 300px;
-      width: 450px;
+      height: 330px;
+      width: 495px;
       border-radius: 12px;
       // background: #D1FAFF;
       background: inherit;
@@ -58,6 +58,7 @@
       transform: rotate(10deg);
       // color: #071B36;
       color: #d1faff;
+    
       .card-logo {
         position: absolute;
         top: 30px;

@@ -1,15 +1,31 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./IndexFeatures.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons"
+import { useAnimation, motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 const IndexFeatures = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
+    }
+  }, [controls, inView])
+
+  const featuresLeftVariations = {
+    visible: { opacity: 1, x: -400, transition: { duration: 0.7 } },
+    hidden: { opacity: 0, x: 0 },
+  }
+
   const featureTitles = [
     "Recurring Offerings",
     "Popular Purchases",
     "Customer Lifecycles",
-    "Detailed Reporting", 
+    "Detailed Reporting",
   ]
   const featureImages = [
     <StaticImage alt="online payments" src="../../Assets/onlinepayments.png" />,

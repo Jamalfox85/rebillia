@@ -5,9 +5,9 @@ import Hover from "react-3d-hover"
 import { useAnimation, motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
-const index_hero = () => {
-  // const controls = useAnimation()
-  // const [ref, inView] = useInView()
+const Index_hero = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
 
   const particlesInit = main => {
     console.log(main)
@@ -19,28 +19,37 @@ const index_hero = () => {
     console.log(container)
   }
 
-  const inViewVariants = {
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
+    }
+  }, [controls, inView])
+
+  const heroLeftVariants = {
+    visible: { opacity: 1, scale: 1.05, x: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 0, x: -500 },
+  }
+  const heroButtonVariants = {
     visible: { opacity: 1, scale: 1.05, transition: { duration: 0.5 } },
     hidden: { opacity: 0, scale: 0 },
   }
-  // useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible")
-  //   }
-  // }, [controls, inView])
-
-  // variants={inViewVariants}
-  //           initial="hidden"
-  //           animate={controls}
-  //           ref={ref}
+  const heroCardVariants = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+    hidden: { opacity: 0, y: 350 },
+  }
 
   return (
     <div className="index_hero">
       <div className="index_hero_left">
-        <h1>
+        <motion.h1
+          variants={heroLeftVariants}
+          initial="hidden"
+          animate={controls}
+          ref={ref}
+        >
           The <span style={{ color: "#D1FAFF" }}>SUBSCRIPTION</span> network
           that keeps you <span style={{ color: "#D1FAFF" }}>CONNECTED</span>.
-        </h1>
+        </motion.h1>
         <div className="particles">
           <Particles
             id="tsparticles"
@@ -130,9 +139,23 @@ const index_hero = () => {
             }}
           />
         </div>
-        <button className="button-green_pos">Contact</button>
+        <motion.button
+          className="button-green_pos"
+          variants={heroButtonVariants}
+          initial="hidden"
+          animate={controls}
+          ref={ref}
+        >
+          Contact
+        </motion.button>
       </div>
-      <div className="index_hero_right">
+      <motion.div
+        className="index_hero_right"
+        variants={heroCardVariants}
+        initial="hidden"
+        animate={controls}
+        ref={ref}
+      >
         <Hover scale={1.03} perspective={450} speed={750}>
           <div className="card">
             <h2 className="card-logo">Rebillia</h2>
@@ -142,9 +165,9 @@ const index_hero = () => {
             <h2 className="card-visa">VISA</h2>
           </div>
         </Hover>
-      </div>
+      </motion.div>
     </div>
   )
 }
 
-export default index_hero
+export default Index_hero

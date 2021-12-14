@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image"
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -13,8 +13,24 @@ import {
 
 import "./Index_mainfunctions.css"
 import Hover from "react-3d-hover"
+import { useAnimation, motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 const Index_mainfunctions = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
+    }
+  }, [controls, inView])
+
+  const mfCardVariations = {
+    visible: { opacity: 1, y: 0, transition: { duraction: 0.7 } },
+    hidden: { opacity: 0, y: 50 },
+  }
+
   return (
     <div className="index-mainfunctions-wrapper">
       <div className="main-functions-grid">
@@ -29,7 +45,13 @@ const Index_mainfunctions = () => {
           </div>
         </div>
         <Hover scale={1.05} perspective={450} speed={750}>
-          <div className="mf mf-1">
+          <motion.div
+            className="mf mf-1"
+            variants={mfCardVariations}
+            initial="hidden"
+            animate={controls}
+            ref={ref}
+          >
             <h6>Multi Currency - Multi Gateway</h6>
             <FontAwesomeIcon icon={faDollarSign} className="mf-image" />
             <p>
@@ -38,10 +60,16 @@ const Index_mainfunctions = () => {
               costs.
             </p>
             <Link to="/features">Learn more</Link>
-          </div>
+          </motion.div>
         </Hover>
         <Hover scale={1.05} perspective={450} speed={750}>
-          <div className="mf mf-2">
+          <motion.div
+            className="mf mf-2"
+            variants={mfCardVariations}
+            initial="hidden"
+            animate={controls}
+            ref={ref}
+          >
             <h6>Rate Plans</h6>
             <FontAwesomeIcon icon={faCalendarAlt} className="mf-image" />
 
@@ -51,10 +79,16 @@ const Index_mainfunctions = () => {
               competitors could only dream of.
             </p>
             <Link to="/features">Learn more</Link>
-          </div>
+          </motion.div>
         </Hover>
         <Hover scale={1.05} perspective={450} speed={750}>
-          <div className="mf mf-3">
+          <motion.div
+            className="mf mf-3"
+            variants={mfCardVariations}
+            initial="hidden"
+            animate={controls}
+            ref={ref}
+          >
             <h6>Modern Payment Options</h6>
             <FontAwesomeIcon icon={faMoneyCheckAlt} className="mf-image" />
 
@@ -64,10 +98,16 @@ const Index_mainfunctions = () => {
               Crypto, and more.
             </p>
             <Link to="/features">Learn more</Link>
-          </div>
+          </motion.div>
         </Hover>
         <Hover scale={1.05} perspective={450} speed={750}>
-          <div className="mf mf-4">
+          <motion.div
+            className="mf mf-4"
+            variants={mfCardVariations}
+            initial="hidden"
+            animate={controls}
+            ref={ref}
+          >
             <h6>Dynamic Shipping Rules</h6>
             <FontAwesomeIcon icon={faShippingFast} className="mf-image" />
 
@@ -77,10 +117,16 @@ const Index_mainfunctions = () => {
               native shipping rules to match your specific needs.
             </p>
             <Link to="/features">Learn more</Link>
-          </div>
+          </motion.div>
         </Hover>
         <Hover scale={1.05} perspective={450} speed={750}>
-          <div className="mf mf-5">
+          <motion.div
+            className="mf mf-5"
+            variants={mfCardVariations}
+            initial="hidden"
+            animate={controls}
+            ref={ref}
+          >
             <h6>User Roles</h6>
             <FontAwesomeIcon icon={faUsers} className="mf-image" />
 
@@ -90,10 +136,16 @@ const Index_mainfunctions = () => {
               part of your business.
             </p>
             <Link to="/features">Learn more</Link>
-          </div>
+          </motion.div>
         </Hover>
         <Hover scale={1.05} perspective={450} speed={750}>
-          <div className="mf mf-6">
+          <motion.div
+            className="mf mf-6"
+            variants={mfCardVariations}
+            initial="hidden"
+            animate={controls}
+            ref={ref}
+          >
             <h6>Powerful Analytics</h6>
             <FontAwesomeIcon icon={faChartBar} className="mf-image" />
             <p>
@@ -102,7 +154,7 @@ const Index_mainfunctions = () => {
               download detailed subscriber reports.
             </p>
             <Link to="/features">Learn more</Link>
-          </div>
+          </motion.div>
         </Hover>
       </div>
     </div>
