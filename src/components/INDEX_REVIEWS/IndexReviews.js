@@ -69,14 +69,7 @@ const IndexReviews = () => {
       <div className="indexreviews_content">
         <div className="indexreviews_left">
           <FontAwesomeIcon icon={faQuoteLeft} className="quote-left" />
-          <motion.p
-            variants={reviewVariants}
-            initial="hidden"
-            animate={controls}
-            ref={ref}
-          >
-            {reviewData[reviewIndex].review}
-          </motion.p>
+          <p>{reviewData[reviewIndex].review}</p>
           <FontAwesomeIcon icon={faQuoteRight} className="quote-right" />
         </div>
         <div className="indexreviews_right">

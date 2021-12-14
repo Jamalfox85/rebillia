@@ -6,12 +6,15 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => (
   <header className="header">
-    <Link to="/"><StaticImage src="../../Assets/logo-rebillia.png" alt="Rebillia Logo" /></Link>
+    <Link to="/">
+      <StaticImage src="../../Assets/logo-rebillia.png" alt="Rebillia Logo" />
+    </Link>
     <div className="header-nav-links">
       <Link to="/product">Product</Link>
       <Link to="/solutions">Solutions</Link>
       <Link to="/pricing">Pricing</Link>
       <Link to="/company">Company</Link>
+      <Link to="/contact">Contact</Link>
     </div>
     <button className="button-green_pos">Contact Us</button>
   </header>

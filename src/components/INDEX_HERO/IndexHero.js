@@ -1,9 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./IndexHero.css"
 import Particles from "react-tsparticles"
 import Hover from "react-3d-hover"
+import { useAnimation, motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 const index_hero = () => {
+  // const controls = useAnimation()
+  // const [ref, inView] = useInView()
+
   const particlesInit = main => {
     console.log(main)
 
@@ -13,6 +18,21 @@ const index_hero = () => {
   const particlesLoaded = container => {
     console.log(container)
   }
+
+  const inViewVariants = {
+    visible: { opacity: 1, scale: 1.05, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 0 },
+  }
+  // useEffect(() => {
+  //   if (inView) {
+  //     controls.start("visible")
+  //   }
+  // }, [controls, inView])
+
+  // variants={inViewVariants}
+  //           initial="hidden"
+  //           animate={controls}
+  //           ref={ref}
 
   return (
     <div className="index_hero">
